@@ -16,7 +16,7 @@ Nonun = zeros (N_total,1);
 for i = 1:N_total
     Nonun(i,1) = (data_need(i,1)-data_need(i,2))/((data_need(i,1)+data_need(i,2))/2); 
 end
-FintV = ranking(-Nonun);         %分配适应度值
+FintV = ranking(Nonun);         %分配适应度值
 SelCh = select('sus',Chrom,FintV);   %选择
 %[m,n]=size(SelCh);
 SelCh_str = num2str(SelCh);
